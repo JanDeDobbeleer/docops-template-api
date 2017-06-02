@@ -1,0 +1,20 @@
+swagger: "2.0"
+info:
+  title: "DocOps API Example"
+  description: "Illustrating the power of documenting your API"
+  version: "1.0"
+host: "my.awesome.api"
+basePath: "/v1"
+tags:
+  - name: General
+    description: Calls used to test the availability of the API
+  - name: Authorization
+    description: Authorize yourself to talk to the API
+schemes:
+  - https
+paths:
+  $ref: ./paths/index.yaml
+definitions:
+  $ref: ./definitions/index.yaml
+parameters:
+  $ref: ./parameters/index.yaml

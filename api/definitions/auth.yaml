@@ -1,0 +1,26 @@
+type: object
+required:
+  - client_id
+  - client_secret
+  - grant_type
+  - username
+  - password
+properties:
+  client_id:
+    description: "ID issued by the API"
+    type: string
+  client_secret:
+    description: "Secret issued by the API"
+    type: string
+  grant_type:
+    description: "The preferred grant type"
+    type: string
+    enum:
+    - password
+    - refresh_token
+  username:
+    description: "User's email, username"
+    type: string
+  password:
+    description: "User password"
+    type: string

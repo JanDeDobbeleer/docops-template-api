@@ -1,0 +1,4 @@
+/ping:
+  $ref: ./ping.yaml
+/oauth2/access_token:
+  $ref: ./auth.yaml

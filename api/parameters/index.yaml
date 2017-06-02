@@ -1,0 +1,6 @@
+authorization:
+      name: Authorization
+      in: header
+      description: "Contains the authentication data"
+      required: true
+      type: string

@@ -1,0 +1,11 @@
+{
+    "port": "4010",
+    "log": false,
+    "debug": true,
+    "mock": {
+        "enabled": true,
+        "dynamic": false
+    },
+    "startupMessage": "Hi there, welcome to the DocOps API example!",
+    "updatedAt": null
+}

@@ -1,0 +1,16 @@
+get:
+  tags:
+  - General
+  summary: "Play ping pong"
+  description: "To be able to test the API, you c ping it."
+  consumes:
+  - application/json
+  produces:
+  - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+  responses:
+    200:
+      description: "Pong"
+      schema:
+        $ref: '#/definitions/Pong'

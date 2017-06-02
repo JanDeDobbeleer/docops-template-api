@@ -1,0 +1,31 @@
+post:
+  tags:
+  - Authorization
+  summary: "Request an access token"
+  description: "To be able to talk to the API, you need to request access token."
+  consumes:
+  - multipart/form-data
+  produces:
+  - application/json
+  parameters:
+    - name: OAuth object
+      in: body
+      description: "Contains the parameters needed to identify"
+      required: true
+      schema:
+        $ref: '#/definitions/Auth'
+  responses:
+    200:
+      description: access info
+      schema:
+        $ref: '#/definitions/Token'
+      examples:
+        application/json:
+          $ref: ./../examples/token.json
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+  x-stoplight:
+    mock:
+      enabled: false

@@ -1,0 +1,33 @@
+@startuml
+
+actor "END USER" as EU
+participant FRONTEND as F #LightBlue
+participant API as A #LightBlue
+database DATABASE as B
+
+EU->F: Enter username and password
+EU->F: Press Enter
+F->A: POST /oauth2/access_token
+A->B: query record
+alt no match
+    B-->A: return empty result
+    A-->F: return error
+    note over A
+        status code = 403
+    end note
+    
+else
+    B-->A: return entity
+    A-/A: verify credentials
+    alt match
+        A-->F: return token
+    else
+        A-->F: return error
+        note over A
+            status code = 403
+        end note
+    end
+end
+
+
+@enduml

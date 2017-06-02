@@ -1,0 +1,18 @@
+type: object
+required:
+ - access_token
+ - token_type
+ - refresh_token
+ - expires_in
+ - scope
+properties:
+  access_token:
+    type: string
+  token_type:
+    type: string
+  refresh_token:
+    type: string
+  expires_in:
+    type: integer
+  scope:
+    type: string

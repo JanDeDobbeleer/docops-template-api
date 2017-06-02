@@ -1,0 +1,16 @@
+{
+    "name": "docops-example",
+    "version": "1.0.0",
+    "description": "Mocking and displaying a Swagger Rest API",
+    "dependencies": {
+        "commander": "^2.9.0",
+        "json-refs": "^2.1.6",
+        "yaml-js": "^0.1.4",
+        "express": "^4.15.2",
+        "cors": "^2.8.3",
+        "swagger-parser": "^3.4.1"
+    },
+    "scripts": {
+        "start": "node ./swagger-ui/serve.js"
+    }
+}

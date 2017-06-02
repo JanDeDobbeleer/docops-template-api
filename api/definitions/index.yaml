@@ -1,0 +1,8 @@
+Pong:
+  $ref : ./pong.yaml
+Auth:
+  $ref: ./auth.yaml
+Token:
+  $ref: ./token.yaml
+Status:
+  $ref: ./status.yaml
