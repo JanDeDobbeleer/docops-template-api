@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script: 
+  - cd api/ && make validate
+  - cd ../docs && make images
