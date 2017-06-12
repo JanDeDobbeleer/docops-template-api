@@ -8,7 +8,7 @@ services:
     volumes:
      - ./:/model/
      - /model/node_modules
-    command: sh -c "node compile.js && prism run -c prism.json -s ./output/swagger.json -p 8010 --cors --list"
+    command: sh -c "node_modules/gulp/bin/gulp.js validate && prism run -c prism.json -s ./output/swagger.json -p 8010 --cors --list"
   swagger:
     image: docops-swagger
     build: .
@@ -17,4 +17,5 @@ services:
     volumes:
      - ./:/model/
      - /model/node_modules
-    command: sh -c "node compile.js && npm start"
+    entrypoint: ['npm', 'run']
+    command: ['compile-start']

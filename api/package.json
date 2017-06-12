@@ -8,9 +8,13 @@
         "yaml-js": "^0.1.4",
         "express": "^4.15.2",
         "cors": "^2.8.3",
-        "swagger-parser": "^3.4.1"
+        "swagger-parser": "^3.4.1",
+	"gulp": "^3.9.1",
+	"browser-sync": "^2.18.12"
     },
     "scripts": {
-        "start": "node ./swagger-ui/serve.js"
+        "start": "node ./swagger-ui/serve.js",
+        "compile-start": "gulp validate && node ./swagger-ui/serve.js",
+        "watch": "gulp watch"
     }
 }
