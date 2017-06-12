@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "options": {
+        "cwd": "${workspaceRoot}/api"
+    },
+    "command": "make",
+    "isShellCommand": true,
+    "args": [],
+    "showOutput": "always",
+    "tasks": [{
+            "taskName": "validate",
+            "args": []
+        },
+        {
+            "taskName": "clean",
+            "args": []
+        },
+        {
+            "taskName": "mock",
+            "args": []
+        },
+        {
+            "taskName": "swagger",
+            "args": []
+        },
+        {
+            "taskName": "full",
+            "args": []
+        }
+    ]
+}
