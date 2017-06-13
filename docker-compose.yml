@@ -1,7 +1,7 @@
 version: '2'
 services:
   mock:
-    image: docops-mock
+    image: docops-template-api
     build: .
     ports:
      - "${PRISM_PORT}:8010"
@@ -10,7 +10,7 @@ services:
      - /model/node_modules
     command: sh -c "node_modules/gulp/bin/gulp.js validate && prism run -c prism.json -s ./output/swagger.json -p 8010 --cors --list"
   swagger:
-    image: docops-swagger
+    image: docops-template-api
     build: .
     ports:
      - "${SWAGGER_PORT}:3000"

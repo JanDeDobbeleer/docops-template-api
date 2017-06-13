@@ -22,4 +22,3 @@ mock:
 
 watch:
 	docker-compose run -p3000:3000 -p3001:3001 swagger watch
-
