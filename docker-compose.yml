@@ -17,5 +17,5 @@ services:
     volumes:
      - ./:/model/
      - /model/node_modules
-    entrypoint: ['npm', 'run']
+    entrypoint: ['yarn', 'run']
     command: ['compile-start']
